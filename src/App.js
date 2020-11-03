@@ -1,14 +1,14 @@
 import React from 'react';
 import './App.css';
 import { Login } from './components/Login';
+import { useLocalStorage } from './hooks/useLocalStorage';
 
 function App() {
-  const [id, setId] = React.useState();
+  const [id, setId] = useLocalStorage();
 
   return (
     <div className="App">
-      {console.log(id)}
-
+      {id}
       <Login onIdSubmit={setId} />
     </div>
   );
