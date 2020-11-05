@@ -7,7 +7,6 @@ import { NewConversationModal } from './NewConversationModal';
 
 const CONVERSATION_KEY = 'conversations';
 const CONTACTS_KEY = 'contacts';
-
 export const Sidebar = ({ id }) => {
   const [activeKey, setActiveKey] = React.useState(CONVERSATION_KEY);
   const [modalOpen, setModalOpen] = React.useState(false);
