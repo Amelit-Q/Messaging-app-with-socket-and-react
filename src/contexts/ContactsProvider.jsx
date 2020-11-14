@@ -3,9 +3,9 @@ import { useLocalStorage } from '../hooks/useLocalStorage';
 
 const ContactsContext = React.createContext();
 
-export const useContacts = () => {
-  return userContext(ContactsContext);
-};
+export function useContacts() {
+  return React.useContext(ContactsContext);
+}
 
 export const ContactsProvider = ({ children }) => {
   const [contacts, setContacts] = useLocalStorage('contacts', []);
@@ -18,7 +18,7 @@ export const ContactsProvider = ({ children }) => {
 
   return (
     <ContactsContext.Provider value={{ contacts, createContacts }}>
-      {children}
+      {children} 40.40
     </ContactsContext.Provider>
   );
 };
